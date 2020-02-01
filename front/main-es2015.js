@@ -1208,8 +1208,10 @@ __webpack_require__.r(__webpack_exports__);
 let SocketContactService = class SocketContactService {
     constructor(_http) {
         this._http = _http;
-        this.baseUrl = "http://localhost:3002";
-        this.ContactUrl = "http://localhost:3002/api/v1/contacts";
+        //private baseUrl = "http://localhost:3002";
+        this.baseUrl = "https://api.npatelproject.site";
+        //private ContactUrl = "http://localhost:3002/api/v1/contacts";
+        this.ContactUrl = "https://api.npatelproject.site/api/v1/contacts";
         this.import_contacts = (import_contacts_data) => {
             this.socket.emit("import-contacts", import_contacts_data);
             this.socket.emit("unique_contact_id", import_contacts_data);

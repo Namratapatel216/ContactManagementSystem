@@ -2079,9 +2079,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       _classCallCheck(this, SocketContactService);
 
-      this._http = _http;
-      this.baseUrl = "http://localhost:3002";
-      this.ContactUrl = "http://localhost:3002/api/v1/contacts";
+      this._http = _http; //private baseUrl = "http://localhost:3002";
+
+      this.baseUrl = "https://api.npatelproject.site"; //private ContactUrl = "http://localhost:3002/api/v1/contacts";
+
+      this.ContactUrl = "https://api.npatelproject.site/api/v1/contacts";
 
       this.import_contacts = function (import_contacts_data) {
         _this5.socket.emit("import-contacts", import_contacts_data);
